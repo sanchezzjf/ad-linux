@@ -14,6 +14,9 @@ Em seguida faça o arquivo ser executável
 chmod +x ubuntu.sh
 ```
 Agora só executar o arquivo e fornecer as informações conforme forem solicitadas.
+```shell
+./ubuntu.sh
+```
 
 ## CentOS
 
@@ -29,3 +32,6 @@ Em seguida faça o arquivo ser executável.
 chmod +x centos.sh
 ```
 Agora só executar o arquivo e fornecer as informações conforme forem solicitadas.
+```shell
+./centos.sh
+```
