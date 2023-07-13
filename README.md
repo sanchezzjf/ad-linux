@@ -15,3 +15,17 @@ chmod +x ubuntu.sh
 ```
 Agora só executar o arquivo e fornecer as informações conforme forem solicitadas.
 
+## CentOS
+
+Entre no servidor como root ou eleve seus privilégios com sudo.
+
+Baixe o arquivo sh referente ao centOS.
+
+```shell
+wget https://raw.githubusercontent.com/sanchezzjf/ad-linux/main/centos.sh
+```
+Em seguida faça o arquivo ser executável.
+```shell
+chmod +x centos.sh
+```
+Agora só executar o arquivo e fornecer as informações conforme forem solicitadas.
