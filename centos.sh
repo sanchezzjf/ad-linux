@@ -10,6 +10,8 @@ fi
 yum update -y
 yum install sssd realmd oddjob oddjob-mkhomedir adcli samba-common samba-common-tools krb5-workstation openldap-clients policycoreutils-python -y
 
+read -p "Digite o domínio que deseja ingressar: " domain
+
 #Coloca o dominio em CAPS
 domain_caps=$(echo $domain | tr '[:lower:]' '[:upper:]')
 #Coloca o hostname em CAPS
@@ -57,12 +59,12 @@ includedir /etc/krb5.conf.d/
 EOL
 
 # Procura o domínio desejado
-realm -v discover ad-auth.life.com.br
+realm -v discover $domain
 
 read -p "Digite o usuário adm do AD: " ad_admin_user
 
 # Insere a máquina no domínio com o usuário previamente fornecido
-realm -v join ad-auth.life.com.br -U $ad_admin_user
+realm -v join $domain -U $ad_admin_user
 
 # Altera a configuração padrão da criação do diretório dos usuários do AD
 sed -i 's+fallback_homedir = /home/%u@%d+fallback_homedir = /home/%d/%u+g' /etc/sssd/sssd.conf
