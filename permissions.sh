@@ -22,9 +22,9 @@ Cmnd_Alias NOROOT = !/usr/bin/su, !/bin/bash
 Cmnd_Alias VIEW_IPTABLES= /usr/sbin/iptables -L, /usr/sbin/iptables -nL
 
 #Grupos definidos no AD
-%life_administradores@$domain	    ALL=(ALL) ALL, NOROOT
-%life_operador@$domain		    ALL=(ALL) ALL, NOROOT, !/sbin/shutdown, !/sbin/reboot, !/usr/bin/rm
-%life_viewer@$domain		    ALL=(ALL) /usr/bin/cat, VIEW_IPTABLES
+%life_administradores@${domain}	    ALL=(ALL) ALL, NOROOT
+%life_operador@${domain}	    ALL=(ALL) ALL, NOROOT, !/sbin/shutdown, !/sbin/reboot, !/usr/bin/rm
+%life_viewer@${domain}		    ALL=(ALL) /usr/bin/cat, VIEW_IPTABLES
 
 EOF
 
