@@ -7,7 +7,7 @@ Entre no servidor como root ou eleve seus privilégios com sudo.
 Baixe o arquivo sh referente ao ubuntu
 
 ```shell
-wget https://raw.githubusercontent.com/sanchezzjf/ad-linux/main/ubuntu.sh
+wget https://raw.githubusercontent.com/lifetecti/ad-linux/main/ubuntu.sh
 ```
 Em seguida faça o arquivo ser executável
 ```shell
@@ -25,7 +25,7 @@ Entre no servidor como root ou eleve seus privilégios com sudo.
 Baixe o arquivo sh referente ao centOS.
 
 ```shell
-wget https://raw.githubusercontent.com/sanchezzjf/ad-linux/main/centos.sh
+wget https://raw.githubusercontent.com/lifetecti/ad-linux/main/centos.sh
 ```
 Em seguida faça o arquivo ser executável.
 ```shell
