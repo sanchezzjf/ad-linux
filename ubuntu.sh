@@ -45,6 +45,8 @@ cat > /etc/krb5.conf << EOL
         .${domain} = ${domain_caps}
 EOL
 
+sed -i 's/use_fully_qualified_names = True/use_fully_qualified_names = False/' /etc/sssd/sssd.conf
+
 # Procura o domínio desejado
 realm -v discover $domain
 
