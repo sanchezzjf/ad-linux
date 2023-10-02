@@ -60,6 +60,8 @@ EOL
 
 sed -i 's/use_fully_qualified_names = True/use_fully_qualified_names = False/' /etc/sssd/sssd.conf
 
+service sssd restart
+
 # Procura o domínio desejado
 realm -v discover $domain
 
