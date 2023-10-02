@@ -58,6 +58,8 @@ includedir /etc/krb5.conf.d/
  .ad-auth.life.com.br = AD-AUTH.LIFE.COM.BR
 EOL
 
+sed -i 's/use_fully_qualified_names = True/use_fully_qualified_names = False/' /etc/sssd/sssd.conf
+
 # Procura o domínio desejado
 realm -v discover $domain
 
