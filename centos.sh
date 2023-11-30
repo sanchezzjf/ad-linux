@@ -58,9 +58,6 @@ includedir /etc/krb5.conf.d/
  .ad-auth.life.com.br = AD-AUTH.LIFE.COM.BR
 EOL
 
-sed -i 's/use_fully_qualified_names = True/use_fully_qualified_names = False/' /etc/sssd/sssd.conf
-
-service sssd restart
 
 # Procura o domínio desejado
 realm -v discover $domain
@@ -72,6 +69,8 @@ realm -v join $domain -U $ad_admin_user
 
 # Altera a configuração padrão da criação do diretório dos usuários do AD
 sed -i 's+fallback_homedir = /home/%u@%d+fallback_homedir = /home/%d/%u+g' /etc/sssd/sssd.conf
+sed -i 's/use_fully_qualified_names = True/use_fully_qualified_names = False/' /etc/sssd/sssd.conf
+
 systemctl restart sssd
 
 echo "Configuração finalizada"
